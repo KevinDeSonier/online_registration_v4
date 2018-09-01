@@ -12,6 +12,7 @@ body {
   font-size: 16px;
   color: #2D3945;
   margin: 0;
+  background-image: linear-gradient(rgba(225,225,225,1), rgba(225,225,225,0) 30%);
 }
 
 h1 {
@@ -33,6 +34,7 @@ p {
 form,
 div {
   margin: 0 4%;
+  max-width: 850px;
 }
 
 div {
@@ -69,7 +71,7 @@ h2 {
 
 p,
 label {
-  color: #BFC0C0;
+  color: #989999;
 }
 
 .contact label {
@@ -94,11 +96,13 @@ button{
 
 input:focus {
   border: 1px solid #2D3945;
+  transition: 1.5s;
+  transition-timing-function: ease-in;
 }
 
 input::placeholder {
   text-align: right;
-  color: #BFC0C0;
+  color: #989999;
   font-size: .65em;
   font-family: 'Merriweather', serif;
   font-weight: lighter;
@@ -109,7 +113,7 @@ select {
 }
 
 select:invalid {
-  color: #BFC0C0;
+  color: #989999;
   font-family: 'Merriweather', serif;
   font-weight: lighter;
   font-size: .85em;
@@ -157,7 +161,7 @@ button {
 
 footer {
   text-align: center;
-  color: #BFC0C0;
+  color: #989999;
   font-size: .9em;
   font-style: italic;
 }
@@ -167,4 +171,50 @@ select:focus,
 textarea:focus,
 button:focus {
     outline: none;
+}
+
+@media (min-width: 769px) {
+
+  form,
+  div {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  div {
+    padding-top: 4em;
+    padding-bottom: 4em;
+    margin-bottom: .25em;
+  }
+
+  h2 {
+    font-size: 1.75em;
+  }
+
+  p {
+    font-size: 1.15em;
+  }
+
+  form {
+    padding-top: 4em;
+  }
+
+  .contact input,
+  select {
+    width: 74%;
+    margin: .5em 0;
+  }
+
+  .contact label {
+    width: 25%;
+  }
+
+  input[type="number"] {
+    width: 25%;
+    display: inline-block;
+  }
+
+  hr {
+    margin: 4em 0;
+  }
 }
